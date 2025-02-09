@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>GDScript Öğrenme Uygulaması</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- PWA için manifest ve icon -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="icon.png">
+</head>
+<body>
+    <div class="container">
+        <h1>GDScript Dersleri</h1>
+        <div class="content">
+            <div class="lesson-list">
+                <select id="lessonSelect"></select>
+            </div>
+            <div class="lesson-content">
+                <pre id="codeDisplay"></pre>
+                <div class="navigation">
+                    <button id="prevButton">Önceki</button>
+                    <button id="nextButton">Sonraki</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        // Service Worker kaydı
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
+</body>
+</html> 
